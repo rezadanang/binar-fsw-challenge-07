@@ -1,6 +1,7 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUserGroup, faGear, faCalendarDay, faClock } from "@fortawesome/free-solid-svg-icons";
 import React, {useEffect, useState} from "react";
 import '../App.css';
-;
 
 function FilterCars() {
     const [cars, setCars] = useState([]);
@@ -118,10 +119,10 @@ function FilterCars() {
                         <h4 className="card-title">Model Car: {item.model}</h4> 
                         <h4>Rp. {item.rentPerDay}</h4> 
                         <p>{item.description}</p> 
-                        <p className="card-text">Capacity: {item.capacity}</p> 
-                        <p className="card-text">Transmission: {item.transmission}</p> 
-                        <p className="card-text">Year: {item.year}</p> 
-                        <p className="card-text">Available Time: {item.availableAt}</p> 
+                        <p className="card-text"><FontAwesomeIcon icon={faUserGroup} style={{color:'grey'}}></FontAwesomeIcon> Capacity: {item.capacity}</p> 
+                        <p className="card-text"><FontAwesomeIcon icon={faGear} style={{color:'grey'}}></FontAwesomeIcon> Transmission: {item.transmission}</p> 
+                        <p className="card-text"><FontAwesomeIcon icon={faCalendarDay} style={{color:'grey'}}></FontAwesomeIcon> Year: {item.year}</p> 
+                        <p className="card-text"><FontAwesomeIcon icon={faClock} style={{color:'grey'}}></FontAwesomeIcon> Available Time: {item.availableAt}</p> 
                         <div className="row pb-4"> <div className="col text-center"> 
                           <button className="btn btn-success" style={{paddingRight: '100px!important', paddingLeft: '100px!important'}}>Pilih Mobil</button> 
                         </div> 
