@@ -30,7 +30,7 @@ function FilterCars() {
         if (driverType === '' || date === '' || time === '' || capacity === '') {
           return alert('Form tidak lengkap!!');
         } else if (isNaN(capacity)){
-          return alert('Pastikan isi form capacity dengan format angka!!');
+          return alert('Pastikan isi form jumlah penumpang dengan format angka!!');
         } else if (date > '2022-03-23'){
           return alert('Data mobil hanya tersedia di bulan maret atau sebelumnya!!');
         } else {
