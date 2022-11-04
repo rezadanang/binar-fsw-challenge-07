@@ -117,7 +117,7 @@ function FilterCars() {
                     <div className="card-block px-3"> 
                       <div className="container-text" style={{margin: '10px'}}> 
                         <h4 className="card-title">Model Car: {item.model}</h4> 
-                        <h4>Rp. {item.rentPerDay}</h4> 
+                        <h4>Rp. {item.rentPerDay}/day</h4> 
                         <p>{item.description}</p> 
                         <p className="card-text"><FontAwesomeIcon icon={faUserGroup} style={{color:'grey'}}></FontAwesomeIcon> Capacity: {item.capacity}</p> 
                         <p className="card-text"><FontAwesomeIcon icon={faGear} style={{color:'grey'}}></FontAwesomeIcon> Transmission: {item.transmission}</p> 
