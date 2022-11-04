@@ -1,19 +1,19 @@
 import React from 'react'
+import styled from 'styled-components'
 import iconFacebook from '../Assets/icon_facebook.svg'
 import iconInstagram from '../Assets/icon_instagram.svg'
 import iconTwitter from '../Assets/icon_twitter.svg'
 import iconMail from '../Assets/icon_mail.svg'
 import iconTwitch from '../Assets/icon_twitch.svg'
 
-// const Footers = styled.section`
-//   padding: 4em;
-//   background: papayawhip;
-// `;
+const Footers = styled.section`
+  background: white;
+`;
 
 const Footer = () => {
   return (
 
-    <footer className="footer">
+    <Footers className='mt-5'>
         <div className="container container-footer pt-5 p-5">
           <div className="row mx-auto">
             <div className="col-md-3 col-sm-6 col-xs-12 ">
@@ -56,7 +56,7 @@ const Footer = () => {
         <div className="text-bottom">
           <p className="text-center mt-5">Sliced by Reza Danang</p>
         </div>
-      </footer>
+      </Footers>
   )
 }
 

@@ -1,8 +1,6 @@
 import React, {useEffect, useState} from "react";
-import { Link } from 'react-router-dom'
 import '../App.css';
-import HeroFilter from "./HeroFilter";
-import Navigation from "./Navigation";
+;
 
 function FilterCars() {
     const [cars, setCars] = useState([]);
@@ -24,12 +22,17 @@ function FilterCars() {
             console.log('err'. err);
         })
     }, [])
-
+    
     const filterCar = () => {
-        console.log('time and date', newDateTime)
+        console.log('merged time and date', newDateTime)
+        console.log("date", date)
         const filteredCars = cars.filter(item => item.capacity >= capacity && (item.availableAt >= newDateTime));
         if (driverType === '' || date === '' || time === '' || capacity === '') {
-          return alert("Form Tidak Lengkap!!");
+          return alert('Form tidak lengkap!!');
+        } else if (isNaN(capacity)){
+          return alert('Pastikan isi form capacity dengan format angka!!');
+        } else if (date > '2022-03-23'){
+          return alert('Data mobil hanya tersedia di bulan maret atau sebelumnya!!');
         } else {
           setDisplayCars(filteredCars);
         }
@@ -97,12 +100,6 @@ function FilterCars() {
                 <button id="load-btn" className="btn btn-success" type="submit" onClick={filterCar}>Cari Mobil</button>
               </div>
             </div>
-            <div className="col" style={{marginTop: '23px'}}>
-              <div className="btn-form m-2">
-                <label htmlFor="btnReset" />
-                <button id="clear-btn" className="btn btn-danger">Reset</button>
-              </div>
-            </div>
           </div>
         </div>
         <div>
@@ -134,7 +131,7 @@ function FilterCars() {
                 </div> 
               </div>         
               </>
-                )) : <p className="text-center">Data Mobil Kosong</p>
+                )) : <p className="text-center">Data Mobil Tidak Tersedia</p>
                 
             }
           </div>
