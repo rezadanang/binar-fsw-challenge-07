@@ -6,6 +6,7 @@ import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 import testiPhoto from '../Assets/foto.jpeg';
+import { Link } from 'react-router-dom';
 
 const Testimonial = () => {
   useEffect(() => {
@@ -138,7 +139,7 @@ const Testimonial = () => {
                 <h1 className="header-card">Sewa Mobil di (Lokasimu) Sekarang!</h1>
                 <p className="text-big-card px-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sed auctor ante, at mattis ligula. Cras feugiat luctus purus in ullamcorper. Donec porta lacus at risus scelerisque eleifend.</p>
                 <div className="mt-5">
-                  <button type="button" className="btn btn-success">Mulai Sewa Mobil</button>
+                  <Link to="/cars"><button type="button" className="btn btn-success">Mulai Sewa Mobil</button></Link>
                 </div>
               </div>
             </div>
